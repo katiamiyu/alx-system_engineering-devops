@@ -13,6 +13,6 @@ do
 	then
 		echo "Fizz"
 	else
-		echo $vl
+		echo "$vl"
 	fi
 done
