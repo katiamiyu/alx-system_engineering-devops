@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# prints the output of a ls commant
+
+for li in ./*
+do
+	if [ -f "$li" ]
+	then
+		filename="${li##*/}"
+		processedfile="${filename#*-}"
+		echo "$processedfile"
+	fi
+done
