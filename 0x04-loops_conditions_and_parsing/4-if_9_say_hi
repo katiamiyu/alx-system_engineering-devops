@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# script use while and if to print best school
+string4="best school"
+n=1
+while [ $n -le 10 ]
+do
+	if [ $n -ne 9 ]
+	then
+		echo "$string4"
+	else
+		echo "$string4"
+		echo "Hi"
+	fi
+	(( n++ ))
+done
