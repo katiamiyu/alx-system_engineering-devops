@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# script used while to print best school 10-times on screen
+string2="best school"
+i=1
+while (( i <= 10 ));
+do
+	echo "$string2"
+	i=$(( i+1 ))
+done
