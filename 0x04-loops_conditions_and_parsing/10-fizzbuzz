@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# use fizz, buzz, fizzbuzz to show the occurrence of number
+
+for ((vl=1; vl<=100; vl++))
+do
+	if ((vl%5 == 0 && vl%3 == 0))
+	then
+		echo "FizzBuzz"
+	elif ((vl%5 == 0))
+	then
+		echo "Buzz"
+	elif ((vl%3 == 0))
+	then
+		echo "Fizz"
+	else
+		echo $vl
+	fi
+done
