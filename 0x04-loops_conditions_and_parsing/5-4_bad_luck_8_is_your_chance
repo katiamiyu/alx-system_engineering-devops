@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# script use while, if and elif to print output
+string5="best school"
+n=1
+while (( n <= 10 ))
+do
+	if (( n == 4))
+	then
+		echo "bad luck"
+	elif (( n == 8 ))
+	then
+		echo "good luck"
+	else
+		echo "$string5"
+	fi
+	(( n++ ))
+done
