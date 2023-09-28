@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# script prints best school 10-times using until
+string3="best school"
+n=0
+until [ $n -gt 9 ]
+do
+	echo "$string3"
+	(( n++ ))
+done
