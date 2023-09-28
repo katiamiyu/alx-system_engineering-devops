@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 # script use while and case to print to screen
+#
+# - displays bad luck from china when n equals 4
+# - displays bad luck from japan when n equals 9
+# - displays bad luck from italy when n equals 17
+# ===============================================
 
 n=1
 
