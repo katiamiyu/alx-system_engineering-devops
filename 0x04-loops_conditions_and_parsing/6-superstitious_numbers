@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # script use while and case to print to screen
 
-string6="best school"
 n=1
 
 while [ $n -le 20 ]
 do
+	echo "$n"
 	case $n in
 		4 )
 			echo "bad luck from China" ;;
@@ -13,8 +13,6 @@ do
 			echo "bad luck from japan" ;;
 		17 )
 			echo "bad luck from italy" ;;
-		* )
-			echo "$string6";;
 	esac
 	(( n++ ))
 done
