@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # script use while, if and elif to print output
-string5="best school"
+string5="Best School"
 n=1
 while (( n <= 10 ))
 do
