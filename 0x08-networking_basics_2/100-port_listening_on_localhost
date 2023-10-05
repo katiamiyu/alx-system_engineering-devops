@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# A script to listen to signal from a port
+nc -l localhost 98
