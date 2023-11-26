@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# ssh into host computer using private key
+
+ssh -i ~/.ssh/school ubuntu@34.239.248.36
