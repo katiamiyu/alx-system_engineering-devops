@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# connecting to host without password
+
+Host *
+	IdentityFile ~/.ssh/school
+	PasswordAuthentication no
