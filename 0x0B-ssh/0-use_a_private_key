@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 # ssh into host computer using private key
 
+<<<<<<< HEAD
 ssh -i ~/.ssh/school ubuntu@52.207.208.233
+=======
+ssh -i ~/.ssh/school ubuntu@100.25.212.98
+>>>>>>> bbec18393c7d95854b3ba82ea0fe3129dc165742
