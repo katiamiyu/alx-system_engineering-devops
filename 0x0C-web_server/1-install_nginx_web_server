@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# installing and config server nginx
+
+apt-get update
+apt-get -y install nginx
+
+# adding an html page to Nginx
+echo "Holberton School" > /var/www/html/index.html
+
+# checking if nginx service is running
+state=$(pgrep nginx)
+if [ -n "$state" ];
+then
+	sudo service nginx start
+else
+	sudo service nginx restart
+fi
