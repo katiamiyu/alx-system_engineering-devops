@@ -1,6 +1,6 @@
-# install flask app from pip
-
-package { 'flask':
+#!/usr/bin/pup
+# Install app flask with specific version of flask (2.1.0)
+package {'flask':
   ensure   => '2.1.0',
   provider => 'pip3'
-  }
+}
