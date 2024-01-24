@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# fixing the apache2 server configuration file
+
+sudo apt-get update
+sudo apt-get install apache2
+cd /etc/apache2/ || exit
+sudo echo "ServerName 127.17.0.2" | tee -a apache2.conf
+sudo service apache2 start
