@@ -20,7 +20,7 @@ function install() {
 
 install haproxy #install haproxy
 
-echo -e "\nSetting up some minor stuff.\n"
+echo -e "\nSetting up proxy.\n"
 
 # create backup of default server config file
 sudo cp /etc/haproxy/haproxy.cfg haproxy_default.backup
