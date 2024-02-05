@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# create a new link to available sites and force creation
-sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-# restart nginx
-service nginx restart
-
+# Configure nginx and stop service frok running
+sudo sed -i 's/8080 default_server/80 default_server/g' /etc/nginx/sites-enabled/default
+sudo service nginx restart
+kill "$(pgrep 'nginx' | head -1)"
