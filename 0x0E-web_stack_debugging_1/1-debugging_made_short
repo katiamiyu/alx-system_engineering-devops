@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# configures nginx server to listen on port 80
 # create a new link to available sites and force creation
-sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 # restart nginx
-sudo service nginx start
+service nginx start
 kill "$(pgrep 'nginx' | head -1)"
 
