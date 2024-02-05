@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # create a new link to available sites and force creation
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 # restart nginx
-service nginx start
-kill "$(pgrep 'nginx' | head -1)"
+service nginx restart
 
