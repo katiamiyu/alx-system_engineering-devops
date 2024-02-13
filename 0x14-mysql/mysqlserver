@@ -1,0 +1,23 @@
+sudo apt update
+sudo apt install mysql-server-5.7
+sudo wget -O mysql57
+https://raw.githubusercontent.com/nuuxcode/alx-system_engineering-devops/master/scripts/mysql57 && sudo chmod +x mysql57 &&  sudo ./mysql57
+
+sudo service mysql start
+
+sudo service mysql status
+
+mysql -u root -p
+CREATE USER 'holberton_user'@'localhost' IDENTIFIED BY 'projectcorrection280hbtn';
+GRANT REPLICATION CLIENT ON *.* TO 'holberton_user'@'localhost';
+
+projectcorrection280hbtn
+
+FLUSH PRIVILEGES;
+
+EXIT;
+
+
+mysql -uholberton_user -p -e "SHOW GRANTS FOR 'holberton_user'@'localhost'"
+
+projectcorrection280hbtn
