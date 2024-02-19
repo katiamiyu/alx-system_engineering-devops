@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""script that fetches info about a given employee using an api
-and exports it in csv format
+"""script that fetches info about a given employee using api and exports it in csv
 """
 import json
 import requests
