@@ -34,7 +34,7 @@ if __name__ == "__main__":
             "completed": task['completed'],
             "username": user_name
         }
-        
+
         builder[dict_key].append(json_data)
     json_encoded_data = json.dumps(builder)
     with open('{}.json'.format(user_id), 'w', encoding='UTF8') as myFile:
