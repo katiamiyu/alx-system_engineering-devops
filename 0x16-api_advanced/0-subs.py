@@ -1,22 +1,27 @@
 #!/usr/bin/python3
-'''
-this module contains the retrieves number_of_subscribers
-'''
+"""
+defines the main function to get
+the sub count from the reddit
+api
+"""
 import requests
-from sys import argv
+import sys
 
 
-def number_of_subscribers(sub_reddit):
-    '''returns the nos for a given subreddit'''
-
-    user = {'User-Agent': 'Lizzie'}
-    url = requests.get('https://www.reddit.com/r/{}/about.json'
-                       .format(sub_reddit), headers=user).json()
-    try:
-        return url.get('data').get('subscribers')
-    except Exception:
-        return 0
-
-
-if __name__ == "__main__":
-    number_of_subscribers(argv[1])
+def number_of_subscribers(subreddit):
+    """
+    query the reddit api to get the number of subscribers
+    for a particular subreddit
+    """
+    if subreddit is None:
+        return (0)
+    endpoint = 'https://www.reddit.com'
+    headers = {'user-agent': 'Testapi/1.0 by danjor667'}
+    info = requests.get('{}/r/{}/about.json'.format(
+        endpoint,
+        subreddit), headers=headers, allow_redirects=False)
+    if info.status_code == 200:
+        data_info = info.json()
+        return (data_info.get('data').get('subscribers'))
+    else:
+        return (0)
