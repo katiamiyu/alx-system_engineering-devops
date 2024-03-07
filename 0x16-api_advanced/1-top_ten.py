@@ -1,24 +1,28 @@
 #!/usr/bin/python3
 '''
-this module contains the function to retrieve top_ten
+module contains function that prints the top ten posts of a subreddit
 '''
 import requests
-from sys import argv
 
 
-def top_ten(sub_reddit):
+def top_ten(subreddit):
+    '''Prints the top ten posts of a subreddit
+    Return:
+        None - when subreddit is invalid
     '''
-    returns the top ten posts
-    '''
-    user = {'User-Agent': 'Lizzie'}
-    url = requests.get('https://www.reddit.com/r/{}/hot/.json?limit=10'
-                       .format(sub_reddit), headers=user).json()
-    try:
-        for post in url.get('data').get('children'):
-            print(post.get('data').get('title'))
-    except Exception:
+    if subreddit is None or not isinstance(subreddit, str):
         print(None)
-
-
-if __name__ == "__main__":
-    top_ten(argv[1])
+    endpoint = 'https://www.reddit.com'
+    headers = {'user-agent': '0x16-api_advanced:project:\
+v1.0.0 (by /u/shobi_ola)'}
+    params = {'limit': 10}
+    info = requests.get('{}/r/{}/hot.json'.format(endpoint, subreddit),
+                        allow_redirects=False,
+                        headers=headers,
+                        params=params)
+    if info.status_code == 200:
+        json_info = info.json()
+        for post in json_info.get('data').get('children'):
+            print(post.get('data').get('title'))
+    else:
+        print(None)
