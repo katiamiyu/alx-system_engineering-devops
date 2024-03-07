@@ -1,20 +1,22 @@
 #!/usr/bin/python3
-"""
-This is a program that accesses the Reddit API
-"""
-
+'''
+this module contains the retrieves number_of_subscribers
+'''
 import requests
+from sys import argv
 
 
-def number_of_subscribers(subreddit):
-    """number_of_subscribers access"""
-    url = "https://reddit.com/r/{}/about.json".format(subreddit)
-    req = requests.get(url)
-    if req.status_code == 200:
-        data = req.json()
-        subs = data["data"]["subscribers"]
-        return subs
-    elif req.status_code == 302:
+def number_of_subscribers(sub_reddit):
+    '''returns the nos for a given subreddit'''
+
+    user = {'User-Agent': 'Lizzie'}
+    url = requests.get('https://www.reddit.com/r/{}/about.json'
+                       .format(sub_reddit), headers=user).json()
+    try:
+        return url.get('data').get('subscribers')
+    except Exception:
         return 0
-    else:
-        return 0
+
+
+if __name__ == "__main__":
+    number_of_subscribers(argv[1])
