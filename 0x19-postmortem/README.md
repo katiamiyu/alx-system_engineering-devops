@@ -42,4 +42,6 @@ Immediate Actions Taken:
 
 - Enhanced Testing Protocols: Testing protocols will be strengthened to ensure that server-side scripts can handle various scenarios robustly.
 
+# Conclusion
 
+The situation has been brought under control, and initial actions have been initiated to restore service functionality. A comprehensive investigation is in progress to tackle the underlying cause and deploy measures to avert a recurrence of such an incident in the future.
