@@ -26,7 +26,7 @@ Immediate Actions Taken:
 
 # Corrective and Preventative Measures
 
-. Corrective Measures:
+## Corrective Measures:
 
 - Detailed Investigation: A thorough investigation will be conducted to pinpoint the specific misconfiguration and address the underlying issue.
 
@@ -36,7 +36,7 @@ Immediate Actions Taken:
 
 
 
-. Preventive Measures:
+## Preventive Measures:
 
 - Regular Server Configuration Audits: Routine audits will be conducted to identify and rectify potential issues proactively.
 
