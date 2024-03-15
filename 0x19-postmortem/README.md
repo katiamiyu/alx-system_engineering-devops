@@ -1,3 +1,5 @@
+[Blog Post on Issue Summary] (https://medium.com/@katiamiyu/issue-summary-3baf96c614b8)
+
 # Issue Summary
 
 Date: 09-03-2024, Time: 06:00 AM
